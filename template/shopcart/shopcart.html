@@ -1,0 +1,91 @@
+<div ng-controller="shopcartCtrl" id="cartpage">
+	<p>
+		购物车
+	</p>
+	<div id="emptycart" ng-if="shopNum==0">
+		<div>
+			<img src="imgs/empty_addrlist.png"/>
+			<p>
+				亲 , 购物车空空的耶~
+			</p>
+			<div ui-sref="home">
+				去逛逛
+			</div>
+		</div>
+	</div>
+	<div id="shopcart" ng-if="!shopNum==0">
+		<span class="addressborder"></span>
+		<div id="address">
+			<div>
+				<p>收货人 <span>陈浩波 先生</span></p>
+				<p>电话 <span>13811193214</span></p>
+				<p>收货地址 <span>北京市物美大卖场三旗百汇店 二层育知同创</span></p>
+			</div>
+			<p>
+				修改>
+			</p>
+		</div>
+		<span class="addressborder"></span>
+		<div id="rounding">
+			<div>
+				<p><span></span> 闪送超市</p>
+				<p>¥0起送，22:00前满¥30免运费</p>
+			</div>
+			<div>
+				凑单专区
+			</div>
+		</div>
+		<div id="time">
+			<div>
+				收货时间 <span>30分钟送达</span>
+			</div>
+			<div>
+				可预定>
+			</div>
+		</div>
+		<div id="remark">
+			<div>
+				收货备注
+			</div>
+			<input type="text" name="" placeholder="可输入100字以内特殊要求内容"/>
+		</div>
+		<div id="shopList" ng-repeat="shop in shopList">
+			<b ng-click="giveUp(shop)" ng-class="shop.giveup?'giveup':'never-giveup'">
+				
+			</b>
+			<i>
+				<b style="background: url({{shop.img}});background-size: 1.875rem;"></b>
+			</i>
+			<div>
+				<p>{{shop.name}}</p>
+				<p>￥{{shop.price}}</p>
+			</div>
+			<span>
+				<i ng-click="reduceShop(shop)"></i>
+				<span>{{shop.num}}</span>
+				<i ng-click="addShop(shop)"></i>
+			</span>
+			
+		</div>
+		<div id="total">
+			<span><div ng-click="allGiveUp()" ng-class="selectAll?'never-giveup':'giveup'"></div>全选</span>
+			<p>
+				共 : <span>￥{{total}}</span>
+			</p>
+			<div>
+				选好了
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

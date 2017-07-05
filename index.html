@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+			<!--<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"/>-->
+		<title></title>
+		<!--<link rel="shortcut icon" type="text/css" href="s"/>-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="lib/flexible.js"></script>
+		<script src="lib/angular.min.js"></script>
+		<script src="lib/angular-ui-route.min.js"></script>
+		<script src="lib/angular-css.min.js"></script>
+		<script src="lib/angular-sanitize.min.js"></script>
+	</head>
+	<body>
+		<div id="page-box">
+			<header id="theheader">
+				<div>
+					<img src="imgs/empty_addrlist.png"/>
+					<p>扫一扫</p>
+				</div>
+				<span>
+					中国附近 <div></div>
+				</span>
+				<div>
+					<img src="imgs/search.png"/>
+					<p>搜索</p>
+				</div>
+			</header>
+			<footer ng-controller="footerCtrl">
+				<ul>
+					<li ng-click="toblock()">
+						<a ui-sref="home">
+							<img src="imgs/home-active.png" alt="" />
+							<p>首页</p>
+						</a>
+					</li>
+					<li ng-click="toblock()">
+						<a ui-sref="lightning">
+							<img src="imgs/lightning.png" alt="" />
+							<p>闪送超市</p>
+						</a>	
+					</li>
+					<li ng-click="tohidden()" tag='true'>
+						<a ui-sref="shopcart">
+							<img src="imgs/shop-cart.png" alt="" />
+							<p>购物车</p>
+						</a>
+						<div>{{total.total()}}</div>
+					</li>
+					<li ng-click="tohidden()">
+						<a ui-sref="mine">
+							<img src="imgs/mine.png" alt="" />
+							<p>我的</p>
+						</a>	
+					</li>
+				</ul>
+			</footer>
+			
+			
+			<!--路由项-->
+			<div id="main">
+				<div ui-view>
+					
+				</div>
+				<div class="">
+					
+				</div>
+			</div>
+			<div id="login" ng-show="!ctrlShade.getLogState() && ctrlShade.whetherDisplay()" ng-controller="loginCtrl">
+				<div id="log-in">
+					<div>
+						用户名: <input type="text" placeholder="请输入用户名" ng-model="username"/>
+					</div>
+					<div>
+						密&nbsp;&nbsp;&nbsp;码: <input type="password" placeholder="请输入密码" ng-model="pwd"/>
+					</div>
+					<div>
+						<button ng-click="login()">登录</button>
+						<button ng-click="signin()">注册</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<script src="app.js"></script>
+		<script src="component/banner.js"></script>
+		<script src="service/service.js"></script>
+		<script src="template/home/home.js"></script>
+		<script src="template/lightning/lightning.js"></script>
+		<script src="template/shopcart/shopcart.js"></script>
+		<script src="template/mine/mine.js"></script>
+	</body>
+</html>

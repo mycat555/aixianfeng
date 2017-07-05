@@ -1,0 +1,125 @@
+#lightning{
+	display: flex;
+	flex-direction: row;
+	font-size: 0.34375rem;
+	
+}
+#lightning>ul{
+	flex-basis: 2.34375rem;
+	overflow: auto;
+	height: 14.75rem;
+	color: #6D6D6D;
+}
+#lightning>ul>li{
+	height: 1.28125rem;
+	border-bottom: 1px solid #E0E0E0;
+	background: #F8F8F8;
+	text-align: center;
+	line-height: 1.28125rem;
+	position: relative;
+}
+#lightning>ul>li>div{
+	background: url(../../imgs/lightning-new.jpg) no-repeat;
+	background-size: 1rem;
+	height: 1rem;
+	width: 1rem;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.active::before{
+	display: inline-block;
+	content: "";
+	width: 0.15625rem;
+	height: 1.09375rem;
+	background: #ffd600;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+
+
+
+
+
+/*右半部分*/
+.lightning-list{
+	flex-grow: 1;
+	padding-left: 0.078125rem;
+	background: #fff;
+	height: 14.75rem;
+	overflow: auto;
+}
+.lightning-list>span{
+	height: 1.28125rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-bottom: 1px solid #E0E0E0;
+}
+.lightning-list>span>div{
+	line-height: 1.25rem;
+}
+.lightning-list>ul>li{
+	display: flex;
+	flex-direction: row;
+}
+/*--------------------*/
+.lightning-list-item{
+	box-sizing: content-box;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	padding: 0.1875rem;
+	border-bottom: 1px  solid #E0E0E0;
+}
+.lightning-list-item>img{
+	height: 3.0625rem;
+}
+.lightning-list-item>div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.lightning-list-item>div>b{
+	font-weight: normal;
+}
+.lightning-list-item>div>p>img:last-of-type{
+	width: 1.5rem;
+	/*height: 0.4375rem;*/
+}
+.lightning-list-item>div>p>img:first-of-type{
+	width: 0.875rem;
+	/*height: 0.4375rem;*/
+	margin-right: 0.1875rem;
+}
+.lightning-list-item>div>span{
+	color: #A3A3A3;
+}
+.lightning-list-item>div>div>b{
+	color: #FF4511;
+}
+.lightning-list-item>div>div>span{
+	color: #9B9B9B;
+}
+
+/*控制items-list行间距*/
+.margin-b{
+	/*margin-bottom: 0.21875rem;*/
+}
+
+/*items-list-item右下加入购物车标志*/
+.lightning-list-item>div>i{
+	border: 1px solid #E7E7E7;
+	border-radius: 50%;
+	background: url(../../imgs/add.gif) no-repeat center center;
+	background-size: 0.34375rem;
+	position: absolute;
+	bottom: 0.34375rem;
+	right: 0.34375rem;
+	width: 0.875rem;
+	height: 0.875rem;
+	
+}

@@ -1,0 +1,12 @@
+
+<div class="banner">
+	<div class="item" ng-class="$index?'':'active'" ng-repeat="i in slider.slide">
+		<img ng-src="{{i.activity.img}}" />
+	</div>
+	<div id="home-menu">
+		<span ng-repeat="j in slider.menu">
+			<img ng-src="{{j.activity.img}}"/>
+			<p>{{j.activity.name}}</p>
+		</span>
+	</div>
+</div>

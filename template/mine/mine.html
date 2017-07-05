@@ -1,0 +1,42 @@
+<div id="mine" ng-controller="mineCtrl">
+	<span id="mine-title">
+		<b></b>
+		<div>
+			<p ng-bind="local.getUser()"></p>
+			<div>V0</div>
+		</div>
+		<i></i>
+	</span>
+	<span id="mine-collect">
+		<div class="mine-collect">
+			<div></div>
+			<p>商品收藏</p>
+		</div>
+		<span class="mine-collect">
+			<div></div>
+			<p>店铺收藏</p>
+		</span>
+	</span>
+	<div id="mine-order">
+		<p>我的定单</p>
+		<p>查看全部定单></p>
+	</div>
+	<div id="mine-state">
+		<div class="mine-state">待付款</div>
+		<div class="mine-state">待收货</div>
+		<div class="mine-state">待评价</div>
+		<div class="mine-state">退款/售后</div>
+	</div>
+	<div id="mine-service">
+		<div class="mine-state">积分商城</div>
+		<div class="mine-state">优惠券</div>
+		<div class="mine-state">收货地址</div>
+		<div class="mine-state">客服/反馈</div>
+	</div>
+	<div id="mine-aboutus">
+		<div class="mine-state">关于我们</div>
+	</div>
+	<div id="mine-exit"  ng-click="quit()">
+		退出当前账号
+	</div>
+</div>

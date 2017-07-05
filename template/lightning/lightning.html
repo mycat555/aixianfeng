@@ -1,0 +1,34 @@
+<div id="lightning" ng-controller="lightningCtrl">
+	<ul>
+		<li ng-repeat="i in shopList" ng-click="choseclassify(i,$index)" ng-bind-html="i" ng-class="addClass==$index?'active':''">
+		</li>
+	</ul>
+	<div class="lightning-list">
+		<span id="">
+				<div class="">
+					全部分类
+				</div>
+				<div class="">
+					综合排序
+				</div>
+		</span>
+		<ul>
+			<li class="lightning-list-item" ng-repeat="i in shopSpecifics">
+				<img ng-src="{{i.img}}" alt="" />
+				<div class="">
+					<b class="margin-b">{{i.name}}</b>
+					<p class="margin-b">
+						<img src="imgs/warn-jx.gif" alt="" />
+						<img src="imgs/warn-mz.gif" alt="" />
+					</p>
+					<span class="margin-b">{{i.specifics}}</span>
+					<div class="">
+						<b>￥{{i.price}}</b>
+						<span>￥{{i.market_price}}</span>
+					</div>
+					<i ng-click="addshop(i)"></i>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
